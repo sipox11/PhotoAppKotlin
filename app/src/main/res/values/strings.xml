@@ -4,4 +4,5 @@
     <string name="favorites">Favorites:</string>
     <string name="likes">Likes:</string>
     <string name="photo_item_content_description">photo item description</string>
+    <string name="high_resolution_image_content_description">High resolution image</string>
 </resources>

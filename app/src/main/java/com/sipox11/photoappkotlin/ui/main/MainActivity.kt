@@ -1,5 +1,6 @@
 package com.sipox11.photoappkotlin.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -12,6 +13,7 @@ import com.sipox11.photoappkotlin.R
 import com.sipox11.photoappkotlin.api.PhotoRetriever
 import com.sipox11.photoappkotlin.data.local.PhotoList
 import com.sipox11.photoappkotlin.data.model.Photo
+import com.sipox11.photoappkotlin.ui.photo.PhotoActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -58,7 +60,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-
+        val intent = Intent(this, PhotoActivity::class.java)
+        val holder = view?.tag as MainAdapter.PhotoViewHolder
+        intent.putExtra(PhotoActivity.PHOTO, mainAdapter?.getPhoto(holder.adapterPosition))
+        startActivity(intent)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
