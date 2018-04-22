@@ -12,7 +12,7 @@ data class Photo(val id: String,
                  val likes: Int,
                  val favorites: Int,
                  val tags: String,
-                 val previewUrl: String,
-                 val webFormatUrl: String) : Serializable {
+                 val previewURL: String,
+                 val webformatURL: String) : Serializable {
 
 }
