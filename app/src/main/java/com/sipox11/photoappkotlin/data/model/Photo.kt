@@ -4,6 +4,8 @@ import java.io.Serializable
 
 /**
  * Created by jcmontero on 22/04/2018
+ *
+ * This class will hold the photo information
  */
 
 data class Photo(val id: String,
